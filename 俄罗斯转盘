@@ -1,0 +1,16 @@
+import random
+import os
+
+def random_shutdown():
+    # 生成一个0到7的随机数
+    random_number = random.randint(0, 7)
+
+    # 有八分之一的概率触发系统关机
+    if random_number == 0:
+        print("触发系统关机...")
+        os.system("shutdown -s -t 0")
+    else:
+        print("未触发系统关机")
+
+# 调用函数
+random_shutdown()
